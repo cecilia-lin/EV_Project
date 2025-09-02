@@ -1,20 +1,39 @@
-This is your group repo for your final project for COGS108.
+# Overview
 
-This repository is private, and is only visible to the course instructors and your group mates; it is not visible to anyone else.
+In response to climate change, air quality concerns, and volatile fuel prices, we analyzed consumer preferences for Battery Electric Vehicles (BEVs) vs. Plug-in Hybrid Electric Vehicles (PHEVs) across Washington State counties, using a comprehensive registration dataset (1999–2025, >210k records).
+We explore geographic patterns, price/range characteristics, and test whether preferences differ significantly by county.
 
-Template notebooks for each component are provided. Only work on the notebook prior to its due date. After each submission is due, move onto the next notebook (For example, after the proposal is due, start working in the Data Checkpoint notebook). 
 
-This repository will be frozen on the final project due date. No further changes can be made after that time.
+# Research Question & Hypothesis
 
-Your project proposal and final project will be graded based solely on the corresponding project notebooks in this repository.
+RQ: Is there a statistically significant difference in the preference for PHEVs vs. BEVs across Washington counties?
 
-Template Jupyter notebooks have been included, with your group number replacing the XXX in the following file names. For each due date, make sure you have a notebook present in this repository by each due date with the following name (where XXX is replaced by your group number):
+H₀ (Null): Vehicle type (BEV vs. PHEV) is independent of county.
+H₁ (Alt): Vehicle type (BEV vs. PHEV) depends on county.
 
-- `ProjectProposal_groupXXX.ipynb`
-- `DataCheckpoint_groupXXX.ipynb`
-- `EDACheckpoint_groupXXX.ipynb`
-- `FinalProject_groupXXX.ipynb`
+Hypothesis (directional): Counties show a significant preference for BEVs over PHEVs, reflected in higher BEV ratios across counties, driven by charging infrastructure, incentives, and technology advantages.
 
-This is *your* repo. You are free to manage the repo as you see fit, edit this README, add data files, add scripts, etc. So long as there are the four files above on due dates with the required information, the rest is up to you all. 
+# Data
 
-Also, you are free and encouraged to share this project after the course and to add it to your portfolio. Just be sure to fork it to your GitHub at the end of the quarter!
+Primary Dataset: Electric Vehicle Population Data (WA)
+
+Source: Washington State (Data.gov catalog)
+
+Link: https://catalog.data.gov/dataset/electric-vehicle-population-data
+
+Rows: ~210,165
+
+Columns: 17 (key: County, Electric Vehicle Type, Electric Range, Base MSRP, Model Year)
+
+
+# Key Findings
+
+- BEVs dominate registrations in every county analyzed; BEV ratios > 0.5 statewide.
+
+- King and Snohomish counties lead in absolute counts and show high BEV:PHEV ratios.
+
+- Range vs. price: BEVs show substantially higher ranges than PHEVs for overlapping price bands.
+
+- Temporal trend: Post-2018, BEV adoption accelerates sharply (model-year proxy).
+
+- Statistics: Chi-square test strongly rejects independence (p ≪ 0.05), indicating county-level differences in BEV/PHEV preference distributions.
